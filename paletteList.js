@@ -1,148 +1,172 @@
-const palettes = [ //throw hex values in here. include hashtags.
-    { //default, makes everything its normal color.
-        name: "Default",
-        skin1: '#676767',
-        scale1: '#C2C2C2',
-        skin2: '#8D8D8D',
-        fur1: '#424242',
-        fur2: '#6D6D6D',
-        sclera: '#FFFFFF',
-        iris: '#4D0D0D',
-        color: '#777D93',
+const paletteList = [ 
+    { 
+        "name": "Default",
+        "data":
+        {
+            "skin1": "#676767",
+            "scale1": "#C2C2C2",
+            "skin2": "#8D8D8D",
+            "fur1": "#424242",
+            "fur2": "#6D6D6D",
+            "sclera": "#FFFFFF",
+            "iris": "#4D0D0D",
+            "color": "#777D93"
+        }
     },
-    { //Autumn
-        name: "Autumn",
-        skin1: '#C28B78',
-        scale1: '#b15145',
-        skin2: '#e8c39e',
-        fur1: '#e3a96d',
-        fur2: '#bc7d5e',
-        sclera: '#f0f0f0',
-        iris: '#b34f42',
-        color: '#e9e5df',
+    { 
+        "name": "Autumn",
+        "data":
+        {
+            "skin1": "#C28B78",
+            "scale1": "#B15145",
+            "skin2": "#E8C39E",
+            "fur1": "#E3A96D",
+            "fur2": "#BC7D5E",
+            "sclera": "#F0F0F0",
+            "iris": "#B34F42",
+            "color": "#E9E5DF"
+        }
     },
-    { //Cheese Moon
-        name: "Cheese Moon", //????? lol
-        skin1: '#817ca7',
-        scale1: '#49538b',
-        skin2: '#d3d3f2',
-        fur1: '#f0b367',
-        fur2: '#ab79a5',
-        sclera: '#e98c85',
-        iris: '#000000',
-        color: '#f0b367',
+    { 
+        "name": "Cheese Moon", 
+        "data":
+        {
+            "skin1": "#817CA7",
+            "scale1": "#49538B",
+            "skin2": "#D3D3F2",
+            "fur1": "#F0B367",
+            "fur2": "#AB79A5",
+            "sclera": "#E98C85",
+            "iris": "#000000",
+            "color": "#F0B367"
+        }
     },
-    { //Cotton Candy
-        name: "Cotton Candy",
-        skin1: '#ffeacb',
-        scale1: '#a4b6df',
-        skin2: '#defffa',
-        fur1: '#cdfceb',
-        fur2: '#ffbfda',
-        sclera: '#efefef',
-        iris: '#dfc3fc',
-        color: '#ffbfda',
+    { 
+        "name": "Cotton Candy",
+        "data":
+        {
+            "skin1": "#FFEACB",
+            "scale1": "#A4B6DF",
+            "skin2": "#DEFFFA",
+            "fur1": "#CDFCEB",
+            "fur2": "#FFBFDA",
+            "sclera": "#EFEFEF",
+            "iris": "#DFC3FC",
+            "color": "#FFBFDA"
+        }
     },
-    { // Red Snow
-        name: "Red Snow",
-        skin1: '#f4dcd9',
-        scale1: '#dbd8dc',
-        skin2: '#d4525e',
-        fur1: '#efefef',
-        fur2: '#636363',
-        sclera: '#efefef',
-        iris: '#d4525e',
-        color: '#a1edf2',
+    { 
+        "name": "Red Snow",
+        "data":
+        {
+            "skin1": "#F4DCD9",
+            "scale1": "#DBD8DC",
+            "skin2": "#D4525E",
+            "fur1": "#EFEFEF",
+            "fur2": "#636363",
+            "sclera": "#EFEFEF",
+            "iris": "#D4525E",
+            "color": "#A1EDF2"
+        }
     },
-    { // Santr
-        name: "Santr",
-        skin1: '#5c4a4b',
-        scale1: '#463233',
-        skin2: '#322324',
-        fur1: '#d58caf',
-        fur2: '#e0b9cc',
-        sclera: '#181818',
-        iris: '#ec7b0c',
-        color: '#d58caf',
+    { 
+        "name": "Santr",
+        "data":
+        {
+            "skin1": "#5C4A4B",
+            "scale1": "#463233",
+            "skin2": "#322324",
+            "fur1": "#D58CAF",
+            "fur2": "#E0B9CC",
+            "sclera": "#181818",
+            "iris": "#EC7B0C",
+            "color": "#D58CAF"
+        }
     },
-    { // Iban
-        name: "Iban",
-        skin1: '#f3c6b9',
-        scale1: '#a8423d',
-        skin2: '#ffe4d7',
-        fur1: '#383060',
-        fur2: '#1a142d',
-        sclera: '#f0f0f0',
-        iris: '#000000',
-        color: '#383060',
+    { 
+        "name": "Iban",
+        "data":
+        {
+            "skin1": "#F3C6B9",
+            "scale1": "#A8423D",
+            "skin2": "#FFE4D7",
+            "fur1": "#383060",
+            "fur2": "#1A142D",
+            "sclera": "#F0F0F0",
+            "iris": "#000000",
+            "color": "#383060"
+        }
     },
-    { // Art Pop
-        name: "Art Pop",
-        skin1: '#ebc094',
-        scale1: '#2c303d',
-        skin2: '#dfdfdf',
-        fur1: '#ebc842',
-        fur2: '#ff6f80',
-        sclera: '#ffffff',
-        iris: '#42ebd0',
-        color: '#94ddde',
+    { 
+        "name": "Art Pop",
+        "data":
+        {
+            "skin1": "#EBC094",
+            "scale1": "#2C303D",
+            "skin2": "#DFDFDF",
+            "fur1": "#EBC842",
+            "fur2": "#FF6F80",
+            "sclera": "#FFFFFF",
+            "iris": "#42EBD0",
+            "color": "#94DDDE"
+        }
     },
 
 
-    { //made the test palette not suck and rebranded it
-        name: "Tundra",
-        skin1: '#EBCAA4',
-        scale1: '#CABA97',
-        skin2: '#A08775',
-        fur1: '#B2C7CB',
-        fur2: '#E6F8F8',
-        sclera: '#E7FDFD',
-        iris: '#74E9E3',
-        color: '#927160',
+    { 
+        "name": "Tundra",
+        "data":
+        {
+            "skin1": "#EBCAA4",
+            "scale1": "#CABA97",
+            "skin2": "#A08775",
+            "fur1": "#B2C7CB",
+            "fur2": "#E6F8F8",
+            "sclera": "#E7FDFD",
+            "iris": "#74E9E3",
+            "color": "#927160"
+        }
     },
-    { // i got bored and needed a break :weary:
-        name: "Aurora",
-        skin1: '#9fd1c3',
-        scale1: '#9dbebf',
-        skin2: '#40646f',
-        fur1: '#2A3444',
-        fur2: '#24586d',
-        sclera: '#16042a',
-        iris: '#c472b9',
-        color: '#292947',
-    },
-    {
-        name: "Pastel Sunset",
-        skin1: '#fda884',
-        scale1: '#d572a4',
-        skin2: '#ffe6ff',
-        fur1: '#e78987',
-        fur2: '#ffbcab',
-        sclera: '#f8e1f8',
-        iris: '#ff693f',
-        color: '#c082d0',
+    { 
+        "name": "Aurora",
+        "data":
+        {
+            "skin1": "#9FD1C3",
+            "scale1": "#9DBEBF",
+            "skin2": "#40646F",
+            "fur1": "#2A3444",
+            "fur2": "#24586D",
+            "sclera": "#16042A",
+            "iris": "#C472B9",
+            "color": "#292947"
+        }
     },
     {
-        name: "Sour",
-        skin1: '#f5ec73',
-        scale1: '#d2fc5b',
-        skin2: '#fff5c9',
-        fur1: '#9cf66c',
-        fur2: '#b5ffa6',
-        sclera: '#ebf8e1',
-        iris: '#fae618',
-        color: '#fff8f3',
+        "name": "Pastel Sunset",
+        "data":
+        {
+            "skin1": "#FDA884",
+            "scale1": "#D572A4",
+            "skin2": "#FFE6FF",
+            "fur1": "#E78987",
+            "fur2": "#FFBCAB",
+            "sclera": "#F8E1F8",
+            "iris": "#FF693F",
+            "color": "#C082D0"
+        }
+    },
+    {
+        "name": "Sour",
+        "data":
+        {
+            "skin1": "#F5EC73",
+            "scale1": "#D2FC5B",
+            "skin2": "#FFF5C9",
+            "fur1": "#9CF66C",
+            "fur2": "#B5FFA6",
+            "sclera": "#EBF8E1",
+            "iris": "#FAE618",
+            "color": "#FFF8F3"
+        }
     }
-
-    /*,
-    {
-        skin1: '',
-        scale1: '',
-        skin2: '',
-        fur1: '',
-        fur2: '',
-        sclera: '',
-        iris: '',
-        color: '',
-    }*/
-];
+]

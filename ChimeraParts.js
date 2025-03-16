@@ -1,10 +1,18 @@
 //constructor defaults to basic human
 class BodyPart {
     constructor(part) {
-        this.name  = part.name;
-        this.type = part.type;
-        this.url = part.url;
-        this.mask = part.mask;
+        this.partName  = part.partName;
+        this.partType = part.partType;
+        this.svgData = part.svgData;
+        this.svgDataAlt = part.svgDataAlt;
+        this.maskOrder = part.maskOrder;
     }
 }
-export { BodyPart };
+//deep copy 
+class Palette {
+    constructor(palette) {
+        this.name = palette.name;
+        this.data = JSON.parse(JSON.stringify(palette.data));
+    }
+}
+export { BodyPart, Palette };
